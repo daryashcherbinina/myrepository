@@ -9,37 +9,36 @@
 
 <body>
     
-    <h2>Текущие очки:</h2> 
     <div id = "points">Очки текущие</div>
     <input type="button" value="Сгенерировать букву" id="button">
-
     <div id="letter"></div>
-    
+    <div class="wrapper">
+    <form id ="form">
+    <p>Игрок: </p>
+    <div id = "player">1</div>
+    <input type="text" name ="name" placeholder = "Имя" >
+    <input type="text" name ="city" placeholder = "Город">
+    <input type="text" name = "plant" placeholder = "Растение">
+    <input type="text" name = "animal" placeholder = "Животное">
+    <input type="text" name = "river" placeholder = "Река">
+    <div id = "points">Очки текущие</div>
+    <button type = "submit" >Subm</button>
+    </form>
     <table>
-  <tbody>
+
     <tr>
-      <th>Игрок</th>
+      <th id ="player" >Игрок</th>
       <th>Имя</th>
       <th>Город</th>
       <th>Растение</th>
       <th>Животное</th>
       <th>Река</th>
-      <th>Очки</th>
+      <th id = "score">Очки</th>
     </tr>
-    <tr>
-     <form id ="form">
-     <td><div id = "player">1</div> </td>
-      <td><input type="text" name ="name" ></td>
-      <td><input type="text" name ="city"></td>
-      <td><input type="text" name = "plant"></td>
-      <td><input type="text" name = "animal"></td>
-      <td><input type="text" name = "river"></td>
-      <td></td>
-      <button type = "submit" >Subm</button>
-    </form>
-</tr>
-  </tbody>
+
+
 </table>
+</div>
  <script src="pr2.js"></script>
 
 </body>
