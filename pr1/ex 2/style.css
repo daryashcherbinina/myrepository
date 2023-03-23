@@ -8,3 +8,8 @@ th {
 td {
    border: 1px solid grey;
 }
+input {
+
+    text-transform: uppercase;
+
+   }

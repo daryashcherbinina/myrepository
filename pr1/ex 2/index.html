@@ -9,20 +9,20 @@
 
 <body>
     
-    <div id = "points">Очки текущие</div>
-    <input type="button" value="Сгенерировать букву" id="button">
+    <input type="button" value="Начать" id="button">
     <div id="letter"></div>
     <div class="wrapper">
-    <form id ="form">
     <p>Игрок: </p>
     <div id = "player">1</div>
+    <div id="timer" >Осталось 5 секунд</div>
+    <form id ="form">
+    
     <input type="text" name ="name" placeholder = "Имя" >
     <input type="text" name ="city" placeholder = "Город">
     <input type="text" name = "plant" placeholder = "Растение">
     <input type="text" name = "animal" placeholder = "Животное">
     <input type="text" name = "river" placeholder = "Река">
-    <div id = "points">Очки текущие</div>
-    <button type = "submit" >Subm</button>
+    <input type = "submit" id = "tim" value="Ответить" >
     </form>
     <table>
 
@@ -35,9 +35,11 @@
       <th>Река</th>
       <th id = "score">Очки</th>
     </tr>
+    
 
 
 </table>
+<input type="button"  id = "end" value="Завершить">
 </div>
  <script src="pr2.js"></script>
 
