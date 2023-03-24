@@ -1,15 +1,55 @@
 table {
    border: 1px solid grey;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+
 }
 th {
    border: 1px solid grey;
 }
-/* границы ячеек тела таблицы */
+
 td {
    border: 1px solid grey;
+    text-align: center;
 }
 input {
 
     text-transform: uppercase;
 
    }
+.wrapper, #begin {
+    text-align: center;
+}
+#submit, #start, #finish {
+
+   padding: 0 20px;
+   margin-bottom: 10px;
+   background: #E9EFF6;
+   line-height: 40px;
+   border-width: 0;
+   border-radius: 20px;
+   font-family: 'Roboto', sans-serif;
+}
+#player {
+    margin-top: 0;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+   font-size: 24px;
+   color: #707981;
+}
+#letter{
+    position: relative;
+   max-width: 100px;
+   margin: 50px auto 0;
+   background: white;
+   border-radius: 30px;
+   margin-top: 0;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+   font-size: 24px;
+   color: #707981;
+}
+
+body {
+   background: #f69a73;
+}

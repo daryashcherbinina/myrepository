@@ -8,13 +8,13 @@
 </head>
 
 <body>
-    
-    <input type="button" value="Начать" id="button">
+   <div id = "begin">
+    <input type="button" value="Начать" id="start">
     <div id="letter"></div>
+    </div>
     <div class="wrapper">
-    <p>Игрок: </p>
-    <div id = "player">1</div>
-    <div id="timer" >Осталось 5 секунд</div>
+    <div id = "player">Игрок: 1</div>
+
     <form id ="form">
     
     <input type="text" name ="name" placeholder = "Имя" >
@@ -22,12 +22,12 @@
     <input type="text" name = "plant" placeholder = "Растение">
     <input type="text" name = "animal" placeholder = "Животное">
     <input type="text" name = "river" placeholder = "Река">
-    <input type = "submit" id = "tim" value="Ответить" >
+    <input type = "submit" id = "submit" value="Ответить" >
     </form>
     <table>
 
     <tr>
-      <th id ="player" >Игрок</th>
+      <th id ="playerTable" >Игрок</th>
       <th>Имя</th>
       <th>Город</th>
       <th>Растение</th>
@@ -39,7 +39,7 @@
 
 
 </table>
-<input type="button"  id = "end" value="Завершить">
+<input type="button"  id = "finish" value="Завершить">
 </div>
  <script src="pr2.js"></script>
 
