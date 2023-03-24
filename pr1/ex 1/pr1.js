@@ -19,6 +19,6 @@ for (let i = 0; i < s.length; i++) {
         }
     }
 }
-alert(s);
+console.log(s);
 
 
