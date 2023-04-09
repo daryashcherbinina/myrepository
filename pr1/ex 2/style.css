@@ -16,7 +16,12 @@ td {
 input {
     text-transform: uppercase;
 }
-
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    background: #f69a73;
+}
 .wrapper,
 #begin {
     text-align: center;
@@ -31,14 +36,11 @@ input {
     line-height: 40px;
     border-width: 0;
     border-radius: 20px;
-    font-family: 'Roboto', sans-serif;
+
 }
 
 #player {
     margin-top: 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
     color: #707981;
 }
 
@@ -49,12 +51,5 @@ input {
     background: white;
     border-radius: 30px;
     margin-top: 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
     color: #707981;
-}
-
-body {
-    background: #f69a73;
 }

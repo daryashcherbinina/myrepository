@@ -1,19 +1,20 @@
 let scoreFsum = 0; //создаем переменные с подсчетом суммы очков
 let scoreSsum = 0;
 
+function points(firstValues, secondValues, letter) {
+    let score = 0;
+    for (let i = 0; i < firstValues.length; i++) { // подсчет очков
+        if (firstValues[i] != "" && firstValues[i].charAt(0) == letter && firstValues[i] != secondValues[i]) {
+            score += 1;
+        }
+    }
+    return score;
+}
 function score(letter, first, second) { //функция подсчета очков
     const firstValues = Object.values(first); //переводим объекты в массивы
     const secondValues = Object.values(second);
-    let scoreF = 0;
-    let scoreS = 0;
-    for (let i = 0; i < firstValues.length; i++) { // подсчет очков
-        if (firstValues[i] != "" && firstValues[i].charAt(0) == letter && firstValues[i] != secondValues[i]) {
-            scoreF += 1;
-        }
-        if (secondValues[i] != "" && secondValues[i].charAt(0) == letter && firstValues[i] != secondValues[i]) {
-            scoreS += 1;
-        }
-    }
+    let scoreF = points(firstValues, secondValues, letter);
+    let scoreS = points(secondValues, firstValues, letter);
     scoreFsum += scoreF; //счетчик суммы очков каждого из игроков
     scoreSsum += scoreS;
     showTable(first, second, {
@@ -45,20 +46,17 @@ buttonStart.onclick = function () {
     letterPlace.innerHTML = Random();
     document.getElementById("start").disabled = true;
 }
+
 let formValuesF;
 let formValuesS;
-
 function retrieveFormValue(event) { //обработка полученной формы
     event.preventDefault();
-    let {
-        form
-    } = document.forms;
-    let {
-        name, city, plant, animal, river
-    } = form;
+    let {form} = document.forms;
+    let {name, city, plant, animal, river} = form;
+
     let letter = document.getElementById('letter').innerHTML;
     let obj = document.getElementById('player');
-    let regexp = /(\d+)/i;
+    let regexp = /\d/g;
     let player = regexp.exec(obj.innerHTML)[0];
     if (player == 1) {
         formValuesF = {
@@ -104,8 +102,8 @@ function showTable(first, second, scoreF, scoreS, selector) { //показ та�
     const strS = Object.assign(playerS, second, scoreS);
     const valuesStrF = Object.values(strF); // создаем массивы из объектов
     const valuesStrS = Object.values(strS);
-    var table = wrapper.getElementsByTagName("table")[0];
-    var tr = document.createElement("tr")
+    let table = wrapper.getElementsByTagName("table")[0];
+    let tr = document.createElement("tr")
         , td;
     for (let i = 0; i < valuesStrF.length; i++) { //создаем строку для первого игрока и заполняем значениями
         td = document.createElement("td");
@@ -113,9 +111,8 @@ function showTable(first, second, scoreF, scoreS, selector) { //показ та�
         tr.appendChild(td);
     }
     table.appendChild(tr);
-    var table = wrapper.getElementsByTagName("table")[0];
-    var tr = document.createElement("tr")
-        , td;
+    tr = document.createElement("tr")
+    table = wrapper.getElementsByTagName("table")[0];
     for (let j = 0; j < valuesStrS.length; j++) { //создаем строку для второго игрока и заполняем значениями
         td = document.createElement("td");
         td.innerHTML = valuesStrS[j];
@@ -124,6 +121,4 @@ function showTable(first, second, scoreF, scoreS, selector) { //показ та�
     table.appendChild(tr);
 }
 form.addEventListener('submit', retrieveFormValue);
-
-
 
